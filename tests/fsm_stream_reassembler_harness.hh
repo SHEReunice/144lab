@@ -42,8 +42,12 @@ struct BytesAvailable : public ReassemblerExpectation {
     BytesAvailable(std::string &&bytes) : _bytes(std::move(bytes)) {}
     std::string description() const {
         std::ostringstream ss;
+<<<<<<< HEAD
         ss << "stream_out().buffer_size() returned " << _bytes.size() << ", and stream_out().read(" << _bytes.size()
            << ") returned the string \"" << _bytes << "\"";
+=======
+        ss << "bytes in stream = \"" << _bytes << "\"";
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
         return ss.str();
     }
 
@@ -165,7 +169,11 @@ class ReassemblerTestHarness {
 
   public:
     ReassemblerTestHarness(const size_t capacity) : reassembler(capacity), steps_executed() {
+<<<<<<< HEAD
         steps_executed.emplace_back("Initialized (capacity = " + std::to_string(capacity) + ")");
+=======
+        steps_executed.emplace_back("Initialized");
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
     }
 
     void execute(const ReassemblerTestStep &step) {

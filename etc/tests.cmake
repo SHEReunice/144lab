@@ -19,7 +19,10 @@ add_test(NAME t_send_window          COMMAND send_window)
 add_test(NAME t_send_ack             COMMAND send_ack)
 add_test(NAME t_send_close           COMMAND send_close)
 
+<<<<<<< HEAD
 add_test(NAME t_strm_reassem_cap         COMMAND fsm_stream_reassembler_cap)
+=======
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 add_test(NAME t_strm_reassem_single      COMMAND fsm_stream_reassembler_single)
 add_test(NAME t_strm_reassem_seq         COMMAND fsm_stream_reassembler_seq)
 add_test(NAME t_strm_reassem_dup         COMMAND fsm_stream_reassembler_dup)

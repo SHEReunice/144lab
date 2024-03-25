@@ -57,7 +57,11 @@ int main() {
                 test.execute(ExpectSegment{}.with_no_flags().with_syn(true).with_payload_size(0).with_seqno(isn));
                 test.execute(AckReceived{WrappingInt32{isn + 1}}.with_win(len));
                 test.execute(ExpectNoSegment{});
+<<<<<<< HEAD
                 test.execute(WriteBytes{string(2 * N_REPS, 'a')});
+=======
+                test.execute(WriteBytes{string{"a", 2 * N_REPS}});
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
                 test.execute(ExpectSegment{}.with_no_flags().with_payload_size(len));
                 test.execute(ExpectNoSegment{});
             }
@@ -79,6 +83,7 @@ int main() {
             test.execute(ExpectNoSegment{});
         }
 
+<<<<<<< HEAD
         {
             TCPConfig cfg;
             WrappingInt32 isn(rd());
@@ -132,6 +137,8 @@ int main() {
             test.execute(ExpectSegment{}.with_fin(true).with_data("4567"));
             test.execute(ExpectNoSegment{});
         }
+=======
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
     } catch (const exception &e) {
         cerr << e.what() << endl;
         return 1;

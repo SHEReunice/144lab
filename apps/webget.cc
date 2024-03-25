@@ -19,6 +19,22 @@ void get_URL(const string &host, const string &path) {
 
     cerr << "Function called: get_URL(" << host << ", " << path << ").\n";
     cerr << "Warning: get_URL() has not been implemented yet.\n";
+<<<<<<< HEAD
+=======
+    TCPSocket socket;
+  Address address(host, "http"); //address(ip/host, service) 传入主机地址 用http协议连接
+  socket.connect(address);
+  //request
+  socket.write("GET " + path + " HTTP/1.1\r\n"); //\r\n表示回车
+  socket.write("HOST: " + host + "\r\n");
+  socket.write("\r\n");
+
+  socket.shutdown(SHUT_WR); //关闭写
+
+  while(!socket.eof()) {
+    std::cout << socket.read(1);
+}
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 }
 
 int main(int argc, char *argv[]) {
