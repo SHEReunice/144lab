@@ -68,7 +68,11 @@ int main() {
                 auto end = data.begin();
                 std::advance(end, end_i);
 
+<<<<<<< HEAD
                 test.execute(SubmitSegment{string{start, end}, start_i});
+=======
+                test.execute(SubmitSegment{string{start, end}, 0});
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
                 test.execute(BytesAssembled(8));
                 test.execute(BytesAvailable(""));
                 test.execute(NotAtEof{});

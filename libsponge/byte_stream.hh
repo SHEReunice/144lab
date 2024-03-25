@@ -16,6 +16,15 @@
 class ByteStream {
   private:
     // Your code here -- add private members as necessary.
+<<<<<<< HEAD
+=======
+    std::deque<char> buffers = {}; //用deque作为缓存
+    size_t buffer_capacity; //buffer的容量
+    size_t written_bytes;
+    size_t read_bytes;
+    bool write_end;
+    bool read_end;
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 
     bool _error{};  //!< Flag indicating that the stream suffered an error.
 
