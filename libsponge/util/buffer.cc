@@ -1,10 +1,11 @@
 #include "buffer.hh"
+#include <stdexcept>
 
 using namespace std;
 
 void Buffer::remove_prefix(const size_t n) {
     if (n > str().size()) {
-        throw out_of_range("Buffer::remove_prefix");
+        throw std::out_of_range("Buffer::remove_prefix");
     }
     _starting_offset += n;
     if (_storage and _starting_offset == _storage->size()) {
@@ -25,7 +26,7 @@ BufferList::operator Buffer() const {
         case 1:
             return _buffers[0];
         default: {
-            throw runtime_error(
+            throw std::runtime_error(
                 "BufferList: please use concatenate() to combine a multi-Buffer BufferList into one Buffer");
         }
     }
