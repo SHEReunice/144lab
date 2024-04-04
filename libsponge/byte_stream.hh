@@ -92,4 +92,8 @@ class ByteStream {
     //!@}
 };
 
+<<<<<<< HEAD
 #endif  // SPONGE_LIBSPONGE_BYTE_STREAM_HH
+=======
+#endif  // SPONGE_LIBSPONGE_BYTE_STREAM_HH
+>>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
