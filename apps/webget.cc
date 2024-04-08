@@ -61,8 +61,5 @@ int main(int argc, char *argv[]) {
     }
 
     return EXIT_SUCCESS;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
+

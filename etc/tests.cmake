@@ -26,10 +26,7 @@ add_test(NAME t_strm_reassem_holes       COMMAND fsm_stream_reassembler_holes)
 add_test(NAME t_strm_reassem_many        COMMAND fsm_stream_reassembler_many)
 add_test(NAME t_strm_reassem_overlapping COMMAND fsm_stream_reassembler_overlapping)
 add_test(NAME t_strm_reassem_win         COMMAND fsm_stream_reassembler_win)
-<<<<<<< HEAD
 add_test(NAME t_strm_reassem_cap         COMMAND fsm_stream_reassembler_cap)
-=======
->>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 
 add_test(NAME t_byte_stream_construction COMMAND byte_stream_construction)
 add_test(NAME t_byte_stream_one_write    COMMAND byte_stream_one_write)

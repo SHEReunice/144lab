@@ -38,7 +38,7 @@ uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
     // DUMMY_CODE(n, isn, checkpoint);
     uint64_t base = 1ul << 32;
     uint64_t mod = checkpoint >> 32;
-    uint64_t rest = static_cast<uint64_t> (operator-(WrappingInt32(n), isn));
+    uint64_t rest = WrappingInt32(n)- isn;
     uint64_t absolute_seqno_1, absolute_seqno_2, absolute_seqno_3;
     absolute_seqno_1 = rest + mod * base;
     if (mod == 0){

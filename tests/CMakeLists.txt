@@ -1,8 +1,5 @@
 add_library (spongechecks STATIC byte_stream_test_harness.cc)
-<<<<<<< HEAD
 # add_library(tcp_parser SHARED ${LIBPCAP})
-=======
->>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 
 macro (add_test_exec exec_name)
     add_executable ("${exec_name}" "${exec_name}.cc")
@@ -10,7 +7,6 @@ macro (add_test_exec exec_name)
     target_link_libraries ("${exec_name}" sponge ${ARGN})
 endmacro (add_test_exec)
 
-<<<<<<< HEAD
 add_test_exec (tcp_parser ${LIBPCAP})
 add_test_exec (fsm_stream_reassembler_cap)
 add_test_exec (fsm_stream_reassembler_single)
@@ -23,18 +19,13 @@ add_test_exec (fsm_stream_reassembler_win)
 add_test_exec (wrapping_integers_cmp)
 add_test_exec (wrapping_integers_unwrap)
 add_test_exec (wrapping_integers_wrap)
-=======
->>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
 add_test_exec (byte_stream_construction)
 add_test_exec (byte_stream_one_write)
 add_test_exec (byte_stream_two_writes)
 add_test_exec (byte_stream_capacity)
 add_test_exec (byte_stream_many_writes)
-<<<<<<< HEAD
 add_test_exec (recv_connect)
 add_test_exec (recv_transmit)
 add_test_exec (recv_window)
 add_test_exec (recv_reorder)
 add_test_exec (recv_close)
-=======
->>>>>>> aebde3b96692caf20c882b6c7e894c1342463397
